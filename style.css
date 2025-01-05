@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/*Navigation Bar*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+}
+
+nav .logo{
+    font-size: 1.5;
+    font-weight: bold;   
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    
+}
+
+nav ul li{
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover{
+    color: #007bff;
+}
+
+
+/*split Screen Layout*/
+
+.split-container{
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel, .right-panel{
+
+    flex: 1;
+    position: relative;
+
+}
+
+.left-panel{
+    background: url('Asset\images (1).jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+
+}
+
+.left-panel .content h1{
+    font-size: 60px;
+    margin-bottom: 16px;
+}
+
+.left-panel .content p{
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.left-panel button{
+    background-color: #0051ff;
+    border: none;
+    padding: 11.2px 24px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: backgorund-color 0.3s;
+}
+
+.left-panel:hover{
+    background-color: #a3a7aa;
+}
+
+.right-panel{
+    background: url();
+    color: white;
+    padding: 32px;
+}
+
+.right-panel .overlay{
+    background-color: rgba(0,0,0,0.5);
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.right-panel h3{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.right-panelp{
+    margin-bottom: 16px;
+    line-height: 1.5;
+
+}
