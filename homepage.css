@@ -111,7 +111,7 @@ nav ul li a:hover{
     line-height: 1.5;
 }
 
-.left-panel button{
+.left-panel a{
     background-color: #0051ff;
     border: none;
     padding: 11.2px 24px;
@@ -122,8 +122,8 @@ nav ul li a:hover{
     transition: backgorund-color 0.3s;
 }
 
-.left-panel:hover{
-    background-color: #a3a7aa;
+.left-panel a:hover{
+    background-color: #002678;
 }
 
 .right-panel{
@@ -144,7 +144,7 @@ nav ul li a:hover{
     margin-bottom: 12px; /* Reduce from 16px */
 }
 
-.right-panelp{
+.right-panel p{
     margin-bottom: 16px;
     line-height: 1.5;
 

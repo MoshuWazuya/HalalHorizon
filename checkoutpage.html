@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Checkout Page</title>
+    <link rel="stylesheet" href="checkoutpage.css">
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group select {
+            appearance: none;
+        }
+
+        .form-group input[type="number"] {
+            max-width: 100px;
+        }
+
+        .submitbutton {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submitbutton:hover {
+            background-color: #0056b3;
+        }
+
+        .travel-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .travel-summary div {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .travel-summary div img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .travel-summary div h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .travel-summary div p {
+            margin: 5px 0 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Travel Checkout</h1>
+            <p>Book your next adventure with ease</p>
+        </div>
+        
+        <div class="card">
+            <h2>Enter Your Travel Details</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <select id="destination" required>
+                        <option value="" disabled selected>Select a destination</option>
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="dubai">Dubai, UAE</option>
+                        <option value="istanbul">Istanbul, Turkey</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dates">Travel Dates</label>
+                    <input type="date" id="dates" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers</label>
+                    <input type="number" id="travelers" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">Special Requests</label>
+                    <textarea id="special-requests" placeholder="Enter any special requests"></textarea>
+                </div>
+
+                <button type="submit" class="submitbutton">Checkout</button>
+            </form>
+        </div>
+
+        <div class="travel-summary">
+            <div>
+                <img src="flight-icon.png" alt="Flights">
+                <h3>Flights to Japan</h3>
+                <p>Starting from $180</p>
+            </div>
+            <div>
+                <img src="hotel-icon.png" alt="Hotel">
+                <h3>Vacation Plan</h3>
+                <p>$750 / 7 Days</p>
+            </div>
+            <div>
+                <img src="mosque-icon.png" alt="Mosque">
+                <h3>Prayer Rooms Access</h3>
+                <p>Free Access</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("checkout-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your travel details have been submitted successfully!");
+        });
+    </script>
+</body>
+</html>
