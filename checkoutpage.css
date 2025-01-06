@@ -1,77 +1,106 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #e5ecee;
+    padding: 0;
+    background-color: #f8f9fa;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
 }
 
-h1 {
-    color: #4c77af;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 25px;
+.header {
     text-align: center;
-    letter-spacing: 0.5px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #000000;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    color: #333;
 }
 
 .card {
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     padding: 20px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 8px 12px;
+.card h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+.form-group {
     margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
 }
 
-textarea {
-    min-height: 100px;
-    resize: vertical;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group select {
+    appearance: none;
+}
+
+.form-group input[type="number"] {
+    max-width: 100px;
 }
 
 .submitbutton {
-    background-color: #4c77af;
-    color: white;
-    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
 }
 
 .submitbutton:hover {
-    background-color: #2a5285;
+    background-color: #0056b3;
 }
 
-.blogpost {
+.travel-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
 }
 
-.blogpost h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #0066ff;
+.travel-summary div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
 }
 
-.blogpost p {
-    color: #666;
-    line-height: 1.5;
+.travel-summary div img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.travel-summary div h3 {
     margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.travel-summary div p {
+    margin: 5px 0 0;
+    color: #777;
 }
