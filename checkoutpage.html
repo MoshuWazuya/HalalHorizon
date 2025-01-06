@@ -26,13 +26,28 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="packages">Packages</label>
+                    <select id="packages" required>
+                        <option value="" disabled selected>Select a package</option>
+                        <option value="">Package A</option>
+                        <option value="">Package B</option>
+                        <option value="">Package C</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="dates">Travel Dates</label>
                     <input type="date" id="dates" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="travelers">Number of Travelers</label>
-                    <input type="number" id="travelers" min="1" max="10" value="1" required>
+                    <label for="travelers">Adults</label>
+                    <input type="number" id="travelers" min="0" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelers">Kids</label>
+                    <input type="number" id="travelers" min="0" max="10" value="1" required>
                 </div>
 
                 <div class="form-group">
