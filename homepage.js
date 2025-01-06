@@ -36,3 +36,31 @@ $(document).ready(function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('JavaScript loaded'); // Debug line
+    
+    const hamburger = document.querySelector('.hamburgerstyle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (!hamburger || !navLinks) {
+        console.error('Menu elements not found!'); // Debug line
+        return;
+    }
+
+    hamburger.addEventListener('click', function(e) {
+        console.log('Hamburger clicked'); // Debug line
+        e.stopPropagation(); // Prevent click from bubbling
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});

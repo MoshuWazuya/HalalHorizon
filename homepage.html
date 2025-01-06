@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="homepagemobile.css">
     <!-- Add jQuery and JavaScript file connections -->
     
-    <script src="homepage.js"></script>
 </head>
 <body>
     <!--For Navigation-->
     <nav>
         <div class="logo">HALAL HORIZONS</div>
-        <ul>
+         <div class="hamburgerstyle">
+             <span></span>
+            <span></span>
+            <span></span>
+         </div>
+        <ul class="nav-links">
             <li><a href="#">HOME</a></li>
             <li><a href="#">GUIDE</a></li>
             <li><a href="#">PLACES</a></li>
@@ -27,6 +31,7 @@
     <div class="split-container">
         <!--Left Side-->
         <div class="left-panel">
+            <img src="assets\images (1).jpeg" alt="Japan Tower">
             <div class="content">
                 <h1>Halal Horizon</h1>
                 <p>Tokyo, Japan is the heart of Japan, where tourists come to see the beauty and technology of Japan. Book your tour today!</p>
@@ -50,6 +55,9 @@
     <section id="places-container">
         <!-- Places will be dynamically loaded here -->
     </section>
+
+    <script src="homepage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
 </body>
 </html>

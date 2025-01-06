@@ -56,7 +56,7 @@ nav ul li a:hover{
 
 .split-container{
     display: flex;
-    height: 100vh;
+    height: 80vh;
 }
 
 .left-panel, .right-panel{
@@ -67,7 +67,8 @@ nav ul li a:hover{
 }
 
 .left-panel{
-    background: url('Asset\images (1).jpeg') no-repeat center center/cover;
+    position: relative;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,14 +78,36 @@ nav ul li a:hover{
 
 }
 
+
+.left-panel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:125%;
+    object-fit: cover;
+    filter: blur(4px) brightness(0.8); /* adds blur and darkens image slightly */
+    z-index: 1; /* puts image behind content */
+}
+
+.left-panel .content{
+    position: relative;
+    z-index: 2; /* puts content above image */
+    color: white; /* ensures text is visible */
+    text-align: center;
+    padding: 2rem;
+    min-height: 400px;
+}
+
 .left-panel .content h1{
-    font-size: 60px;
-    margin-bottom: 16px;
+    font-size: 40px; /* Reduce from 60px */
+    margin-bottom: 12px; /* Reduce from 16px */
+    
 }
 
 .left-panel .content p{
-    font-size: 16px;
-    margin-bottom: 24px;
+    font-size: 14px; /* Reduce from 16px */
+    margin-bottom: 16px; /* Reduce from 24px */
     line-height: 1.5;
 }
 
@@ -104,20 +127,21 @@ nav ul li a:hover{
 }
 
 .right-panel{
+    
     background: url();
     color: white;
-    padding: 32px;
+    padding: 24px; /* Reduce from 32px */
 }
 
 .right-panel .overlay{
     background-color: rgba(0,0,0,0.5);
-    padding: 32px;
+    padding: 24px; /* Reduce from 32px */
     border-radius: 10px;
 }
 
 .right-panel h3{
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 20px; /* Reduce from 24px */
+    margin-bottom: 12px; /* Reduce from 16px */
 }
 
 .right-panelp{
@@ -125,3 +149,4 @@ nav ul li a:hover{
     line-height: 1.5;
 
 }
+
