@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .location {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .location:hover {
+            transform: scale(1.05);
+        }
+        .location img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .location h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Travel Destination</h1>
+        <div class="locations">
+            <div class="location" onclick="showPackages('paris')">
+                <img src="assets/paris.jpg" alt="Paris">
+                <h3>Paris</h3>
+            </div>
+            <div class="location" onclick="showPackages('maldives')">
+                <img src="assets/maldives.jpg" alt="Maldives">
+                <h3>Maldives</h3>
+            </div>
+            <div class="location" onclick="showPackages('tokyo')">
+                <img src="assets/tokyo.jpg" alt="Tokyo">
+                <h3>Tokyo</h3>
+            </div>
+            <div class="location" onclick="showPackages('new_york')">
+                <img src="assets/new_york.jpg" alt="New York">
+                <h3>New York</h3>
+            </div>
+            <div class="location" onclick="showPackages('sydney')">
+                <img src="assets/sydney.jpg" alt="Sydney">
+                <h3>Sydney</h3>
+            </div>
+            <div class="location" onclick="showPackages('cape_town')">
+                <img src="assets/cape_town.jpg" alt="Cape Town">
+                <h3>Cape Town</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPackages(location) {
+            window.location.href = `packages.html?location=${location}`;
+        }
+    </script>
+</body>
+</html>
