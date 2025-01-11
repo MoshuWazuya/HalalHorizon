@@ -37,7 +37,9 @@
     <script>
         // Retrieve the location from the URL query parameter
         const urlParams = new URLSearchParams(window.location.search);
-        const location = urlParams.get('location');
+        const selectedLocation = urlParams.get('location');
+
+        console.log("Selected location:", selectedLocation);  // Debugging line
 
         // Sample data for packages
         const packagesData = {
@@ -118,8 +120,9 @@
         // Populate the packages based on the selected location
         const packagesContainer = document.getElementById('packages');
 
-        if (packagesData[location]) {
-            packagesData[location].forEach(pkg => {
+        // Check if the location is valid and exists in the packagesData object
+        if (location && packagesData[selectedLocation]) {
+            packagesData[selectedLocation].forEach(pkg => {
                 const packageElement = document.createElement('div');
                 packageElement.className = 'package';
                 packageElement.innerHTML = `
