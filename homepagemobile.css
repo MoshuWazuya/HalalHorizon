@@ -175,6 +175,18 @@ footer {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+
+    .bismillah-logo {
+        height: 25px;  /* Slightly smaller on mobile */
+        margin: 0 10px;
+    }
+    /* Hide bismillah on very small screens if needed */
+    @media screen and (max-width: 480px) {
+        .bismillah-logo {
+            display: none;
+        }
+    }
+
     .hamburgerstyle {
         display: block;
     }
