@@ -21,23 +21,23 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    height: 100px;  /* Increase nav height to accommodate logo */
+    height: 100px;  
 }
 .bismillah-logo {
-    height: 75px;  /* Adjust this value to match your nav height */
+    height: 75px;  
     width: auto;
     margin: 0 15px; /* Add space on both sides */
-    position: absolute;  /* This helps center the logo */
-    left: 50%;          /* Move to center */
-    transform: translateX(-50%); /* Center perfectly */
+    position: absolute;  /* center the logo */
+    left: 50%;          
+    transform: translateX(-50%); 
 }
 
 /* Adjust other nav elements to make space for centered logo */
 .logo {
-    margin-right: auto;  /* Push to left */
+    margin-right: auto;  
 }
 .nav-links {
-    margin-left: auto;   /* Push to right */
+    margin-left: auto;   
 }
 
 nav .logo{
@@ -67,15 +67,12 @@ nav ul li a:hover{
     color: #007bff;
 }
 
-
-
-
 /*split Screen Layout*/
 
 /* Split container adjustment */
 .split-container {
     display: flex;
-    height: 80vh;  /* This ensures it takes only 80% of viewport height */
+    height: 80vh;  
     position: relative;
     z-index: 1;
 }
@@ -154,6 +151,7 @@ nav ul li a:hover{
     text-align: center;
     padding: 2rem;
     min-height: 400px;
+    
 }
 
 .left-panel .content h1{
@@ -163,7 +161,7 @@ nav ul li a:hover{
 }
 
 .left-panel .content p{
-    font-size: 14px; /* Reduce from 16px */
+    font-size: larger; /* Reduce from 16px */
     margin-bottom: 16px; /* Reduce from 24px */
     line-height: 1.5;
 }
@@ -171,9 +169,9 @@ nav ul li a:hover{
 .left-panel a{
     background-color: #0051ff;
     border: none;
-    padding: 11.2px 24px;
+    padding: 15px 24px;
     color: white;
-    font-size: 16px;
+    font-size: x-large;
     cursor: pointer;
     border-radius: 5px;
     transition: backgorund-color 0.3s;
@@ -203,14 +201,14 @@ nav ul li a:hover{
     z-index: 1; /* puts image behind content */
 }
 
-.right-panel .overlay{
+.right-panel .overlay {
     position: relative;
     z-index: 2;
     background-color: rgba(0,0,0,0.5);
-    padding: 24px;
+    padding: 40px;  /* Increased padding */
     border-radius: 10px;
-    width: 80%;            /* Control the width of the overlay */
-    max-width: 500px; 
+    width: 90%;     /* Increased width */
+    max-width: 1200px;  /* Increased max-width */
 }
 
 .right-panel h3{
@@ -219,37 +217,30 @@ nav ul li a:hover{
     margin-bottom: 12px; /* Reduce from 16px */
 }
 
-.right-panel p{
+.right-panel li{
     
     margin-bottom: 16px;
     line-height: 1.5;
+    font-size: x-large;
 
 }
 
 /* Contact Section Styles */
 .contact-section {
-    position: relative;
+    position: fixed;  /* Changed from relative to fixed */
+    bottom: 0;        /* Pin to bottom */
+    left: 0;         /* Ensure left alignment */
     z-index: 2;
-    background-color: #080707;  /* Updated background color */
+    background-color: #080707;
     color: white;
-    padding: 10px 0;  /* Very small padding */
-    font-size: 0.8rem;  /* Small font size */
-    width: 100%;  /* Full width */
-}
-body {
-    display: flex;
-    flex-direction: column;  /* Stack elements vertically */
-}
-main {
-    flex: 1;  /* Allow main content to grow */
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    width: 100%;
 }
 
+
 .contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -269,12 +260,10 @@ main {
     color: #353030;
 }
 
-/* Remove previous heading styles */
 .contact-section h2 {
     display: none;
 }
 
-/* Add separator style */
 .contact-item:not(:last-child)::after {
     content: '|';
     margin-left: 20px;
