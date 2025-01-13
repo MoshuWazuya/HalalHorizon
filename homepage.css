@@ -68,19 +68,37 @@ nav ul li a:hover{
 }
 
 
+
+
 /*split Screen Layout*/
 
-.split-container{
+/* Split container adjustment */
+.split-container {
     display: flex;
-    height: 80vh;
+    height: 80vh;  /* This ensures it takes only 80% of viewport height */
+    position: relative;
+    z-index: 1;
 }
+
 
 .left-panel, .right-panel{
-
     flex: 1;
     position: relative;
-
 }
+
+/* Background images */
+.left-panel img, 
+.right-panel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125%;
+    object-fit: cover;
+    filter: blur(4px) brightness(0.8);
+    z-index: 1;
+}
+
 
 .left-panel{
     position: relative;
@@ -206,5 +224,60 @@ nav ul li a:hover{
     margin-bottom: 16px;
     line-height: 1.5;
 
+}
+
+/* Contact Section Styles */
+.contact-section {
+    position: relative;
+    z-index: 2;
+    background-color: #080707;  /* Updated background color */
+    color: white;
+    padding: 10px 0;  /* Very small padding */
+    font-size: 0.8rem;  /* Small font size */
+    width: 100%;  /* Full width */
+}
+body {
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+}
+main {
+    flex: 1;  /* Allow main content to grow */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item i {
+    font-size: 12px;
+    color: #353030;
+}
+
+/* Remove previous heading styles */
+.contact-section h2 {
+    display: none;
+}
+
+/* Add separator style */
+.contact-item:not(:last-child)::after {
+    content: '|';
+    margin-left: 20px;
+    color: #ddd2d2;
 }
 
