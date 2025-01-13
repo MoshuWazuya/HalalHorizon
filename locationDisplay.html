@@ -4,42 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Booking</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 20px;
-        }
-        .location {
-            display: inline-block;
-            width: 30%;
-            margin: 10px;
-            text-align: center;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .location:hover {
-            transform: scale(1.05);
-        }
-        .location img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .location h3 {
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="location-styling.css">
 </head>
 <body>
     <div class="container">
-        <h1>Select a Travel Destination</h1>
+        <h1 class="title-box">Select a Travel Destination</h1>
         <div class="locations">
             <div class="location" onclick="showPackages('paris')">
                 <img src="assets/paris.jpg" alt="Paris">
