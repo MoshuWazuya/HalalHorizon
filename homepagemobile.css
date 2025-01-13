@@ -159,10 +159,19 @@ footer {
 
 /* Hamburger menu styles */
 .hamburgerstyle {
-    display: none;
+    display: none; /* Hidden by default on desktop */
     cursor: pointer;
-    z-index: 1000;
 }
+
+.hamburgerstyle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
 
 .hamburgerstyle span {
     display: block;
@@ -175,6 +184,100 @@ footer {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+
+    .hamburgerstyle {
+        display: block; /* Show on mobile */
+        z-index: 1000;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100px; /* Adjust based on your nav height */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    /* Hamburger animation */
+    .hamburgerstyle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburgerstyle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburgerstyle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+     /* Split container adjustments */
+     .split-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        min-height: 50vh;
+    }
+    /* Left panel content adjustments */
+    .left-panel .content .logo-image {
+        width: 250px;
+        margin-left: 0;
+    }
+
+    .left-panel .content h1 {
+        font-size: 28px;
+    }
+
+    .left-panel .content p {
+        font-size: 16px;
+    }
+
+    .left-panel a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Right panel adjustments */
+    .right-panel .overlay {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .right-panel li {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    /* Contact section adjustments */
+    .contact-section {
+        padding: 8px 10px;
+    }
+
+    .contact-info {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .contact-item:not(:last-child)::after {
+        margin-left: 10px;
+    }
+
+
 
     .bismillah-logo {
         height: 25px;  /* Slightly smaller on mobile */
@@ -213,16 +316,45 @@ footer {
         margin: 15px 0;
     }
 
-    /* Hamburger animation */
-    .hamburgerstyle.active span:nth-child(2) {
-        opacity: 0;
+
+}
+
+@media screen and (max-width: 480px) {
+    /* Navigation adjustments */
+    nav {
+        height: 70px;
+        padding: 0.5rem 1rem;
     }
 
-    .hamburgerstyle.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    /* Further reduce content sizes */
+    .left-panel .content .logo-image {
+        width: 200px;
     }
 
-    .hamburgerstyle.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    .left-panel .content h1 {
+        font-size: 24px;
     }
+
+    .right-panel .overlay {
+        padding: 15px;
+    }
+
+    /* Contact section adjustments */
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-item:not(:last-child)::after {
+        display: none;
+    }
+
+    .contact-item {
+        font-size: 0.7rem;
+    }
+}
+
+/* Add smooth transitions */
+.left-panel, .right-panel, .contact-section {
+    transition: all 0.3s ease;
 }

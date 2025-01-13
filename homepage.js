@@ -39,28 +39,68 @@ $(document).ready(function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript loaded'); // Debug line
-    
+    // Get all required elements
     const hamburger = document.querySelector('.hamburgerstyle');
     const navLinks = document.querySelector('.nav-links');
-    
+    const menuLinks = document.querySelectorAll('.nav-links a');
+
+    // Check if elements exist
     if (!hamburger || !navLinks) {
-        console.error('Menu elements not found!'); // Debug line
+        console.error('Required menu elements not found!');
         return;
     }
 
+    // Toggle menu function
+    const toggleMenu = (show) => {
+        if (show === undefined) {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        } else {
+            hamburger.classList.toggle('active', show);
+            navLinks.classList.toggle('active', show);
+        }
+    };
+
+    // Hamburger click handler
     hamburger.addEventListener('click', function(e) {
-        console.log('Hamburger clicked'); // Debug line
-        e.stopPropagation(); // Prevent click from bubbling
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // Close menu when clicking menu links
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            toggleMenu(false);
+        });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+        if (navLinks.classList.contains('active') && 
+            !hamburger.contains(e.target) && 
+            !navLinks.contains(e.target)) {
+            toggleMenu(false);
         }
+    });
+
+    // Close menu on window resize (prevents menu from staying open when switching to desktop view)
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (window.innerWidth > 768) { // Desktop breakpoint
+                toggleMenu(false);
+            }
+        }, 250);
+    });
+
+    // Prevent scrolling when menu is open (optional)
+    const toggleScroll = (disable) => {
+        document.body.style.overflow = disable ? 'hidden' : '';
+    };
+
+    // Add scroll lock when menu opens (optional)
+    navLinks.addEventListener('transitionend', function() {
+        toggleScroll(this.classList.contains('active'));
     });
 });
