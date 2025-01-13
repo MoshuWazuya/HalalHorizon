@@ -110,7 +110,7 @@ nav ul li a:hover{
 }
 
 .left-panel .content .logo-image {
-    width: 350px; /* Adjust size as needed */
+    width: 350px;
     height: auto;
     margin-bottom: 20px;
     margin-left: 50px; 
@@ -120,7 +120,7 @@ nav ul li a:hover{
     filter: none;
 }
 
-/* Make sure the background image stays blurred */
+/* background image stays blurred */
 .left-panel > img {  /* Using > to target only the direct child img */
     position: absolute;
     top: 0;
@@ -147,7 +147,7 @@ nav ul li a:hover{
 .left-panel .content{
     position: relative;
     z-index: 2; /* puts content above image */
-    color: white; /* ensures text is visible */
+    color: white; 
     text-align: center;
     padding: 2rem;
     min-height: 400px;
@@ -155,15 +155,15 @@ nav ul li a:hover{
 }
 
 .left-panel .content h1{
-    font-size: 40px; /* Reduce from 60px */
-    margin-bottom: 12px; /* Reduce from 16px */
+    font-size: 40px; 
+    margin-bottom: 12px; 
     
 }
 
 .left-panel .content p{
-    font-size: larger; /* Reduce from 16px */
-    margin-bottom: 16px; /* Reduce from 24px */
-    line-height: 1.5;
+    font-size: larger; 
+    margin-bottom: 16px; /
+    
 }
 
 .left-panel a{
@@ -227,9 +227,9 @@ nav ul li a:hover{
 
 /* Contact Section Styles */
 .contact-section {
-    position: fixed;  /* Changed from relative to fixed */
-    bottom: 0;        /* Pin to bottom */
-    left: 0;         /* Ensure left alignment */
+    position: fixed;  
+    bottom: 0;        
+    left: 0;         
     z-index: 2;
     background-color: #080707;
     color: white;
