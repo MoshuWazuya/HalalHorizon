@@ -27,33 +27,11 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
 
 nav ul li a {
     color: #ffffff;
+    margin: 0 1rem;
     text-decoration: none;
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
 }
 
 button {
@@ -74,22 +52,9 @@ section {
     text-align: center;
 }
 
-.places-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 
-.place {
-    margin: 1rem;
-    text-align: center;
-}
 
-.place img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+
 
 footer {
     background: #333;
@@ -284,6 +249,8 @@ footer {
         height: 25px;  /* Slightly smaller on mobile */
         margin: 0 10px;
     }
+
+    
     /* Hide bismillah on very small screens if needed */
     @media screen and (max-width: 480px) {
         .bismillah-logo {
