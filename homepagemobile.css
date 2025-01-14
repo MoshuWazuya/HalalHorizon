@@ -22,9 +22,10 @@ nav {
     transition: all 0.3s ease;
 }
 
-
+/*Logo*/
 nav .logo {
     color: white; 
+
 }
 
 nav ul {
