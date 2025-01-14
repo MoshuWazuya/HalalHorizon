@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const isActive = show !== undefined ? show : !hamburger.classList.contains('active');
         hamburger.classList.toggle('active', isActive);
         navLinks.classList.toggle('active', isActive);
-        document.body.style.overflow = isActive ? 'hidden' : ''; // Lock scroll if menu is open
-        hamburger.setAttribute('aria-expanded', isActive); // Accessibility update
+        document.body.style.overflow = isActive ? 'hidden' : ''; 
+        hamburger.setAttribute('aria-expanded', isActive); 
     };
 
     hamburger.addEventListener('click', (e) => {

@@ -1,16 +1,16 @@
 html {
-    height: 100%; /* Ensure the html element spans the full height of the viewport */
+    height: 100%; 
     background: linear-gradient(to bottom, #87d2f0, #ccccf8);
     background-size: cover;
-    background-attachment: fixed; /* Ensures the gradient is fixed and doesn't cut off */
-    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100%; /* Ensures the body content always fills at least the viewport height */
+    min-height: 100%; 
     color: #333;
     line-height: 1.6;
 }
@@ -42,23 +42,23 @@ body {
 
 /* Booking Card */
 .booking-card {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #ffffff;
+    border: 2px solid #000000;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 5);
     padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.2s;
 }
 
 .booking-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .booking-card h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #2980b9;
+    color: #023c62;
 }
 
 .booking-card p {
@@ -76,13 +76,14 @@ a {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: Large;
+    font-weight: 700;
     color: rgb(41, 128, 185);
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #1c598a;
+    color: #003561;
 }
 
 .title-box {
