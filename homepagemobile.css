@@ -167,7 +167,7 @@ nav {
 .contact-section {
     background: #333;
     color: white;
-    padding: 0.5rem 1rem; /* Reduced padding */
+    padding: 0.5rem 1rem; 
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -180,7 +180,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-size: 0.9rem; /* Smaller font size */
+    font-size: 0.9rem; 
 }
 
 .contact-item {
@@ -274,7 +274,7 @@ nav {
         width: 90%;
         padding: 1.5rem;
         margin: 30px auto; 
-        max-width: 350px; /* Added max-width constraint */
+        max-width: 350px; 
     }
 
     nav {
@@ -376,7 +376,7 @@ nav {
         padding: 0.5rem;
     }
 
-    /* Contact Section Mobile Adjustments */
+   
     .contact-info {
         flex-direction: row; /* Keep it in one line */
         font-size: 0.8rem; 
@@ -391,12 +391,12 @@ nav {
         width: 95%;
         padding: 1rem;
         margin: 15px auto; 
-        max-width: 300px; /* Added max-width constraint */
+        max-width: 300px; 
     }
 
     .logo-image {
-        width: 140px; /* Reduced from 150px */
-        margin: 0 auto 1rem auto; /* Further reduced bottom margin */
+        width: 140px; 
+        margin: 0 auto 1rem auto; 
     }
 
     
