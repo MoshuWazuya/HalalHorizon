@@ -12,36 +12,38 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem 2rem;
     background: rgba(49, 48, 48, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(245, 240, 240, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
 }
 
-/*Logo*/
-nav .logo {
-    color: white; 
-
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-nav ul {
+.bismillah-logo {
+    height: 30px;
+    margin: 0 15px;
+}
+
+.nav-links {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.nav-links li {
     margin-left: 40px;
 }
 
-
-
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
@@ -50,14 +52,14 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #fafafa;
 }
 
-nav ul li a::after {
+.nav-links li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
@@ -65,298 +67,236 @@ nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.nav-links li a:hover::after {
     width: 100%;
 }
 
-section {
-    text-align: center;
+/* Hamburger Menu */
+.hamburgerstyle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerstyle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Split Container Styles */
+.split-container {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-panel img, .right-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.content, .overlay {
+    position: relative;
+    z-index: 1;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), ;
-    background-size: cover;
     color: white;
+    background: rgba(0, 0, 0, 0.8);
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-section p {
-    font-size: 1.2rem;
+.logo-image {
+    width: 300px;
     margin-bottom: 2rem;
 }
 
-button {
-    padding: 0.8rem 1.5rem;
-    background-color: #ffffff;
-    color: #fff;
-    border: none;
+.content p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.content a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: white;
+    color: black;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #ffffff;
-}
-
-
-footer {
+/* Contact Section */
+.contact-section {
     background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+    color: white;
+    padding: 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
 
-    
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-   
-    .places-container {
-        flex-direction: column;
-        align-items: center;
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 1rem;
+    }
+    
+    .hamburgerstyle {
+        display: block;
     }
 
-    button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-
-/* Hamburger menu styles */
-.hamburgerstyle {
-    display: none; /* Hidden by default on desktop */
-    cursor: pointer;
-}
-
-.hamburgerstyle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.3s ease;
-}
-
-
-.hamburgerstyle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.3s ease;
-}
-
-}
-
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-
-    nav ul {
-        flex-direction: column;
+    .nav-links {
         display: none;
-        background-color: rgba(255, 255, 255, 0.95);
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
+        background: rgba(49, 48, 48, 0.95);
+        flex-direction: column;
+        align-items: center;
         padding: 1rem 0;
     }
-    nav ul.active {
+
+    .nav-links.active {
         display: flex;
     }
-    nav ul li {
-        
+
+    .nav-links li {
         margin: 1rem 0;
     }
 
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100px; /* Adjust based on your nav height */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Hamburger Animation */
+    .hamburgerstyle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
 
-    .nav-links.active {
-        display: flex;
+    .hamburgerstyle.active span:nth-child(2) {
+        opacity: 0;
     }
 
-    nav ul li {
-        margin: 15px 0;
+    .hamburgerstyle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+}
 
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+    
     .hamburgerstyle {
         display: block;
-        cursor: pointer;
         z-index: 1000;
     }
 
-    .hamburgerstyle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px 0;
-        background-color: rgb(255, 255, 255);
-        transition: all 0.3s ease;
-    }
-
-    /* Navigation menu */
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(49, 48, 48, 0.95); /* Match nav background */
+        background: rgba(49, 48, 48, 0.95);
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
+        padding: 1rem 0;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    nav ul li {
-        margin: 15px 0;
+    .nav-links li {
+        margin: 1rem 0;
     }
 
-    nav ul li a {
-        color: white; /* Ensure text is visible */
+    /* Hamburger Animation */
+    .hamburgerstyle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
 
+    .hamburgerstyle.active span:nth-child(2) {
+        opacity: 0;
+    }
 
+    .hamburgerstyle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
-     /* Split container adjustments */
-     .split-container {
+    /* Split Container Mobile Adjustments */
+    .split-container {
         flex-direction: column;
-        height: auto;
+        min-height: auto;
     }
 
     .left-panel, .right-panel {
-        width: 100%;
-        min-height: 50vh;
-        display: flex;
-    }
-    /* Left panel content adjustments */
-    .left-panel .content .logo-image {
-        width: 250px;
-        margin-left: 0;
+        min-height: 100vh;
     }
 
-    .left-panel .content h1 {
-        font-size: 28px;
+    .content, .overlay {
+        padding: 1rem;
     }
 
-    .left-panel .content p {
-        font-size: 16px;
+    .logo-image {
+        width: 200px;
+        margin: 1rem auto;
     }
 
-    .left-panel a {
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    /* Right panel adjustments */
-    .right-panel .overlay {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .right-panel li {
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-
-    /* Contact section adjustments */
-    .contact-section {
-        padding: 8px 10px;
-    }
-
+    /* Contact Section Mobile Adjustments */
     .contact-info {
-        gap: 10px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
     }
+}
 
-    .contact-item:not(:last-child)::after {
-        margin-left: 10px;
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
     }
-
-
 
     .bismillah-logo {
-        height: 25px;  /* Slightly smaller on mobile */
-        margin: 0 10px;
+        display: none;
     }
 
-}
-    
-    /* Hide bismillah on very small screens if needed */
-@media screen and (max-width: 480px) {
-        .bismillah-logo {
-            display: none;
-        }
-
-         .hero {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .content p {
+        font-size: 0.9rem;
     }
 
-    .hero .logo {
-        margin: 0 auto;
-        font-size: 1.5rem; /* Adjust size as needed */
-        display: block;
-        text-align: center;
+    .content a {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
-
-    .hero .description {
-        font-size: 1rem; /* Adjust description size if necessary */
-        margin-top: 1rem;
-    }
-
-    .hero button {
-        margin-top: 1rem;
-    }
-    }
-
-    .hamburgerstyle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none; /* Hide by default on mobile */
-        position: fixed;
-        top: 70px; /* Adjust based on your nav height */
-        right: 0;
-        width: 100%;
-        height: auto;
-        background-color: rgb(240, 234, 234);
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        box-shadow: 0 2px 5px rgba(238, 238, 238, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-    }
-
-    nav ul li {
-        margin: 15px 0;
-    }
-
-/* Add smooth transitions */
-.left-panel, .right-panel, .contact-section {
-    transition: all 0.3s ease;
 }
