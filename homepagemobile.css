@@ -306,7 +306,7 @@ footer {
     .hero button {
         margin-top: 1rem;
     }
-    
+    }
 
     .hamburgerstyle {
         display: block;
@@ -333,15 +333,6 @@ footer {
     nav ul li {
         margin: 15px 0;
     }
-
-}
-
-
-
-
-
-
-
 
 /* Add smooth transitions */
 .left-panel, .right-panel, .contact-section {
