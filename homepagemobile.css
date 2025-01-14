@@ -366,11 +366,6 @@ nav {
     .content, .overlay {
         padding: 1rem;
     }
-
-    .bismillah-logo {
-        display: none;
-    }
-
     .logo-image {
         width: 180px; 
         margin: 0 auto 1.5rem auto; 
