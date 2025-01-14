@@ -2,129 +2,78 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #f4f4f9);
+    background-size: cover;
     color: #333;
 }
 
 .container {
-    padding: 40px;
-    max-width: 1200px; /* Max width to make content fit nicely on larger screens */
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #555;
-    font-size: 3em; /* Font size for desktop */
 }
 
 .locations {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px; /* Space between items */
+    gap: 15px;
 }
 
 .location {
-    width: 32%; /* Each location box takes up 32% of the container's width */
+    width: 30%;
     text-align: center;
-    padding: 25px;
+    padding: 15px;
     background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 30px;
 }
 
 .location:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .location img {
-    width: 100%; /* Ensures images are responsive */
-    height: auto;
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .location h3 {
-    margin: 15px 0;
+    margin: 10px 0;
     color: #444;
-    font-size: 1.8em; /* Increased font size for better visibility */
+}
+
+@media (max-width: 768px) {
+    .location {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .location {
+        width: 100%;
+    }
 }
 
 .title-box {
     background-color: #e0f7fa;
     color: #00796b;
     text-align: center;
-    padding: 30px;
-    border-radius: 12px;
-    font-size: 2.2em;
-    margin-bottom: 50px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 1024px) {
-    .container {
-        padding: 30px;
-    }
-
-    .location {
-        width: 48%; /* Adjust width for tablet devices */
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2.5em; /* Adjust font size for tablets */
-    }
-
-    .locations {
-        gap: 20px; /* Reduced gap for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .location {
-        width: 100%; /* Full width for smaller tablets and mobile devices */
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2.2em; /* Slightly smaller heading on mobile */
-    }
-
-    .locations {
-        gap: 15px; /* Reduce gap for mobile screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 15px; /* Reduced padding for very small screens */
-    }
-
-    h1 {
-        font-size: 1.8em; /* Smaller font size for very small screens */
-    }
-
-    .location {
-        width: 100%; /* Ensure each location box takes full width on small screens */
-        padding: 15px;
-    }
-
-    .locations {
-        gap: 10px; /* Reduced gap for very small screens */
-    }
-
-    .title-box {
-        padding: 25px; /* Adjust padding for small devices */
-        font-size: 1.8em; /* Smaller font size for title box */
-    }
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
