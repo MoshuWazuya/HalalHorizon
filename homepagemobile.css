@@ -273,7 +273,8 @@ nav {
     .content {
         width: 90%;
         padding: 1.5rem;
-        margin: 30px auto; /* Adjusted margin for mobile */
+        margin: 30px auto; 
+        max-width: 350px; /* Added max-width constraint */
     }
 
     nav {
@@ -363,13 +364,12 @@ nav {
     }
 
     .content, .overlay {
-        padding: 0rem;
+        padding: 1rem;
     }
-
     .logo-image {
-        width: 200px;;
-        margin: 0 auto 2rem auto; /* Centered horizontally */
-        display: block; /* Ensures proper centering */
+        width: 180px; 
+        margin: 0 auto 1.5rem auto; 
+        display: block;
     }
 
     .contact-section {
@@ -379,7 +379,7 @@ nav {
     /* Contact Section Mobile Adjustments */
     .contact-info {
         flex-direction: row; /* Keep it in one line */
-        font-size: 0.8rem; /* Even smaller font for mobile */
+        font-size: 0.8rem; 
         flex-wrap: nowrap; /* Prevent wrapping */
         justify-content: space-around;
     }
@@ -390,14 +390,16 @@ nav {
     .content {
         width: 95%;
         padding: 1rem;
-        margin: 20px auto;
+        margin: 15px auto; 
+        max-width: 300px; /* Added max-width constraint */
     }
 
     .logo-image {
-        width: 150px;
+        width: 140px; /* Reduced from 150px */
+        margin: 0 auto 1rem auto; /* Further reduced bottom margin */
     }
 
-    /* Adjust contact section for smaller screens */
+    
     .contact-section {
         padding: 0.8rem;
     }
