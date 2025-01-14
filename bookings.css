@@ -77,10 +77,20 @@ a {
     margin-top: 20px;
     text-decoration: none;
     font-size: 1rem;
-    color: #2980b9;
+    color: rgb(41, 128, 185);
     transition: color 0.3s;
 }
 
 a:hover {
     color: #1c598a;
+}
+
+.title-box {
+    background-color: #e0f7fa;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
