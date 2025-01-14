@@ -15,7 +15,7 @@ nav {
     padding: 1.5rem;
     background: rgba(49, 48, 48, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(245, 240, 240, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -348,11 +348,11 @@ footer {
         right: 0;
         width: 100%;
         height: auto;
-        background-color: rgb(73, 73, 73);
+        background-color: rgb(240, 234, 234);
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(238, 238, 238, 0.1);
     }
 
     .nav-links.active {
