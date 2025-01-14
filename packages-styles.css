@@ -110,3 +110,14 @@ button:hover {
         padding: 8px 15px;
     }
 }
+
+.title-box {
+    background-color: #e0f7fa;
+    color: #00796b;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
