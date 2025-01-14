@@ -195,24 +195,46 @@ footer {
     }
 
     .hamburgerstyle {
-        display: block; /* Show on mobile */
+        display: block;
+        cursor: pointer;
         z-index: 1000;
-        display: none; /* Hidden by default on desktop */
-    cursor: pointer;
     }
 
-    /* Hamburger animation */
-    .hamburgerstyle.active span:nth-child(2) {
-        opacity: 0;
+    .hamburgerstyle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease;
     }
 
-    .hamburgerstyle.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    /* Navigation menu */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(49, 48, 48, 0.95); /* Match nav background */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
     }
 
-    .hamburgerstyle.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    .nav-links.active {
+        display: flex;
     }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        color: white; /* Ensure text is visible */
+    }
+
+
 
      /* Split container adjustments */
      .split-container {
