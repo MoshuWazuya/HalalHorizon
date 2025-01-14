@@ -366,6 +366,10 @@ nav {
         padding: 0rem;
     }
 
+    .bismillah-logo {
+        display: none;
+    }
+
     .logo-image {
         width: 200px;;
         margin: 0 auto 2rem auto; /* Centered horizontally */
