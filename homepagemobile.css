@@ -136,7 +136,7 @@ footer {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
     }
-}
+
 
 @media (max-width: 480px) {
     nav .logo {
@@ -232,6 +232,7 @@ footer {
     .left-panel, .right-panel {
         width: 100%;
         min-height: 50vh;
+        display: flex;
     }
     /* Left panel content adjustments */
     .left-panel .content .logo-image {
@@ -259,7 +260,7 @@ footer {
     }
 
     .right-panel li {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 12px;
     }
 
@@ -357,4 +358,7 @@ footer {
 /* Add smooth transitions */
 .left-panel, .right-panel, .contact-section {
     transition: all 0.3s ease;
+}
+
+
 }
