@@ -1,13 +1,13 @@
 // Smooth scrolling for navigation links
-$(document).ready(function() {
-    $('nav ul li a').on('click', function(event) {
+$(document).ready(function () {
+    $('nav ul li a').on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             const hash = this.hash;
 
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 800, function() {
+            }, 800, function () {
                 window.location.hash = hash;
             });
         }
@@ -18,7 +18,8 @@ $(document).ready(function() {
         url: 'data/places.json', // JSON file path
         method: 'GET',
         dataType: 'json',
-        success: function(data) {
+        success: function (data) {
+            console.log('Places loaded successfully:', data);
             let placesHtml = '';
             data.places.forEach(place => {
                 placesHtml += `
@@ -31,76 +32,62 @@ $(document).ready(function() {
             });
             $('#places-container').html(placesHtml);
         },
-        error: function(err) {
+        error: function (err) {
             console.error('Error loading places:', err);
         }
     });
+    
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all required elements
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the hamburger menu and nav links
     const hamburger = document.querySelector('.hamburgerstyle');
     const navLinks = document.querySelector('.nav-links');
-    const menuLinks = document.querySelectorAll('.nav-links a');
 
-    // Check if elements exist
-    if (!hamburger || !navLinks) {
-        console.error('Required menu elements not found!');
-        return;
+    if (hamburger && navLinks) {
+        // Toggle menu visibility
+        const toggleMenu = () => {
+            const isActive = navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active', isActive);
+            toggleScroll(isActive); // Prevent scrolling when menu is open
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked
+        navLinks.addEventListener('click', function (event) {
+            if (event.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                toggleScroll(false);
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                toggleScroll(false);
+            }
+        });
     }
 
-    // Toggle menu function
-    const toggleMenu = (show) => {
-        if (show === undefined) {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        } else {
-            hamburger.classList.toggle('active', show);
-            navLinks.classList.toggle('active', show);
-        }
-    };
-
-    // Hamburger click handler
-    hamburger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        toggleMenu();
-    });
-
-    // Close menu when clicking menu links
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            toggleMenu(false);
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (navLinks.classList.contains('active') && 
-            !hamburger.contains(e.target) && 
-            !navLinks.contains(e.target)) {
-            toggleMenu(false);
-        }
-    });
-
-    // Close menu on window resize (prevents menu from staying open when switching to desktop view)
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            if (window.innerWidth > 768) { // Desktop breakpoint
-                toggleMenu(false);
-            }
-        }, 250);
-    });
-
-    // Prevent scrolling when menu is open (optional)
+    // Prevent scrolling when menu is open
     const toggleScroll = (disable) => {
         document.body.style.overflow = disable ? 'hidden' : '';
     };
 
-    // Add scroll lock when menu opens (optional)
-    navLinks.addEventListener('transitionend', function() {
-        toggleScroll(this.classList.contains('active'));
+    // Close menu on window resize (prevents menu from staying open when switching to desktop view)
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            if (window.innerWidth > 768) { // Desktop breakpoint
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                toggleScroll(false);
+            }
+        }, 250);
     });
 });
