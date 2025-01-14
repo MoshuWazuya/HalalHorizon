@@ -274,7 +274,7 @@ nav {
         width: 90%;
         padding: 1.5rem;
         margin: 30px auto; 
-        max-width: 350px; 
+        max-width: 350px; /* Added max-width constraint */
     }
 
     nav {
@@ -376,11 +376,11 @@ nav {
         padding: 0.5rem;
     }
 
-   
+    /* Contact Section Mobile Adjustments */
     .contact-info {
         flex-direction: row; /* Keep it in one line */
         font-size: 0.8rem; 
-        flex-wrap: nowrap; /* Prevent wrapping */
+        flex-wrap: nowrap; 
         justify-content: space-around;
     }
 }
@@ -391,7 +391,7 @@ nav {
         width: 95%;
         padding: 1rem;
         margin: 15px auto; 
-        max-width: 300px; 
+        max-width: 300px; /
     }
 
     .logo-image {
