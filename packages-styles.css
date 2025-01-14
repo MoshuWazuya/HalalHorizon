@@ -1,10 +1,16 @@
+html {
+    height: 100%; /* Ensure the html element spans the full height of the viewport */
+    background: linear-gradient(to bottom, #87d2f0, #ccccf8);
+    background-size: cover;
+    background-attachment: fixed; /* Ensures the gradient is fixed and doesn't cut off */
+    background-repeat: no-repeat; /* Prevents repeating */
+}
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background: linear-gradient(to bottom, #87CEEB, #f4f4f9);
-    background-size: cover;
+    min-height: 100%; /* Ensures the body content always fills at least the viewport height */
     color: #333;
 }
 
