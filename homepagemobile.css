@@ -167,7 +167,7 @@ nav {
 .contact-section {
     background: #333;
     color: white;
-    padding: 0.5rem 1rem; /* Reduced padding */
+    padding: 0.5rem 1rem; 
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -180,7 +180,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-size: 0.9rem; /* Smaller font size */
+    font-size: 0.9rem; 
 }
 
 .contact-item {
@@ -273,7 +273,8 @@ nav {
     .content {
         width: 90%;
         padding: 1.5rem;
-        margin: 30px auto; /* Adjusted margin for mobile */
+        margin: 30px auto; 
+        max-width: 350px; 
     }
 
     nav {
@@ -363,7 +364,7 @@ nav {
     }
 
     .content, .overlay {
-        padding: 0rem;
+        padding: 1rem;
     }
 
     .bismillah-logo {
@@ -371,19 +372,19 @@ nav {
     }
 
     .logo-image {
-        width: 200px;;
-        margin: 0 auto 2rem auto; /* Centered horizontally */
-        display: block; /* Ensures proper centering */
+        width: 180px; 
+        margin: 0 auto 1.5rem auto; 
+        display: block;
     }
 
     .contact-section {
         padding: 0.5rem;
     }
 
-    /* Contact Section Mobile Adjustments */
+   
     .contact-info {
         flex-direction: row; /* Keep it in one line */
-        font-size: 0.8rem; /* Even smaller font for mobile */
+        font-size: 0.8rem; 
         flex-wrap: nowrap; /* Prevent wrapping */
         justify-content: space-around;
     }
@@ -394,14 +395,16 @@ nav {
     .content {
         width: 95%;
         padding: 1rem;
-        margin: 20px auto;
+        margin: 15px auto; 
+        max-width: 300px; 
     }
 
     .logo-image {
-        width: 150px;
+        width: 140px; 
+        margin: 0 auto 1rem auto; 
     }
 
-    /* Adjust contact section for smaller screens */
+    
     .contact-section {
         padding: 0.8rem;
     }
