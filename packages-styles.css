@@ -36,6 +36,7 @@ h1 {
 .package {
     width: 100%;
     border-radius: 10px;
+    border: 2px solid #000000;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: linear-gradient(145deg, #ffffff, #f0f0f0);
@@ -48,8 +49,9 @@ h1 {
 }
 
 .package h3 {
-    background-color: #007BFF;
+    background-color: #5ea6f3;
     color: #fff;
+    text-shadow: 0 0 3px #000000;
     margin: 0;
     padding: 15px;
     font-size: 1.5rem;
@@ -59,11 +61,12 @@ h1 {
 .package p {
     margin: 15px;
     font-size: 1rem;
-    line-height: 1.6;
+    color: #ff2200;
+    line-height: 1.6; 
 }
 
 .package p strong {
-    color: #007BFF;
+    color: #3f6082;
 }
 
 button {
@@ -71,8 +74,9 @@ button {
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 1rem;
+    text-shadow: 0 0 3px #000000;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #5ea6f3;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -82,10 +86,10 @@ button {
 
 button:hover {
     background-color: #0056b3;
+    scale: 1.1;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
