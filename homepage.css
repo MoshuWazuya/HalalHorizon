@@ -387,27 +387,8 @@ nav ul li{
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Mobile Responsive Design */
-@media screen and (max-width: 768px) {
-    .right-panel ul {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
 
-    .right-panel li {
-        padding: 20px;
-        font-size: 16px;
-    }
 
-    .right-panel h3 {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .right-panel .overlay {
-        padding: 25px;
-    }
-}
 
 
 
